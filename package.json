@@ -1,16 +1,21 @@
 {
   "name": "gorest-bni",
   "version": "1.0.0",
-  "description": "",
+  "description": "mocha chai gorest",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test create new user": "mocha test/api/create-new-user.js",
+    "test get user details": "mocha test/api/get-user-details.js"
+  },
+  "mocha":{
+    "timeout":10000
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.3.8",
+    "express": "^4.18.2",
     "mocha": "^10.2.0",
     "supertest": "^6.3.3"
   },
