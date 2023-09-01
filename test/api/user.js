@@ -24,7 +24,7 @@ describe('Post New User', () => {
             console.error('Error:', error);
         }
     });
-})
+});
 
 describe('Post Duplicate User', () => { 
   it('Response Status Equal to 422', async () => {
@@ -126,16 +126,16 @@ describe('Get All User', () => {
   it('Response Status Equal to 200', async () => {
     const response = await request(baseUrl)
       .get(`/users?access-token=${authToken}`)
-      expect(response.status).to.equal(200)
+      expect(response.status).to.equal(200);
     })
 });
 
 describe('Get Selected User Details', () =>{  
   it('Response Status Equal to 200', async () => {
     const response = await request(baseUrl)
-      .get(`/users/${userId}?access-token=${authToken}`)
-      expect(response.status).to.equal(200)
-      })
+      .get(`/users/${userId}?access-token=${authToken}`);
+      expect(response.status).to.equal(200);
+    });
 });
 
 
@@ -149,14 +149,14 @@ describe('Put Selected User Details', () =>{
         "gender": "female",
         "status": "active"
     });
-      expect(response.status).to.equal(200)
-      })
+      expect(response.status).to.equal(200);
+    });
 });
 
 describe('Delete Selected User', () =>{
   it('Response Status Equal to 200', async () => {
       const response = await request(baseUrl)
       .delete(`/users/${userId}?access-token=${authToken}`)
-      expect(response.status).to.equal(200)
-      })
+      expect(response.status).to.equal(200);
+    });
 });
