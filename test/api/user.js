@@ -65,6 +65,63 @@ describe('Post Without Field Name', () => {
   });
 });
 
+describe('Post Without Field Email', () => { 
+  it('Response Status Equal to 422', async () => {
+    const newUser = {
+        "name": "Salsabila",
+        "gender": "female",
+        "status": "inactive"
+    };
+    try {
+        const response = await request(baseUrl)
+          .post(`/users?access-token=${authToken}`)
+          .send(newUser);
+
+        expect(response.status).to.equal(422);
+      } catch (error) {
+        console.error('Error:', error);
+    }
+  });
+});
+
+describe('Post Without Field Gender', () => { 
+  it('Response Status Equal to 422', async () => {
+    const newUser = {
+        "name": "Salsabila",
+        "email": "salsabila.a@jast-herman.example",
+        "status": "inactive"
+    };
+    try {
+        const response = await request(baseUrl)
+          .post(`/users?access-token=${authToken}`)
+          .send(newUser);
+
+        expect(response.status).to.equal(422);
+      } catch (error) {
+        console.error('Error:', error);
+    }
+  });
+});
+
+describe('Post Without Field Status', () => { 
+  it('Response Status Equal to 422', async () => {
+    const newUser = {
+        "name": "Salsabila",
+        "email": "salsabila.a@jast-herman.example",
+        "gender": "female",
+    };
+    try {
+        const response = await request(baseUrl)
+          .post(`/users?access-token=${authToken}`)
+          .send(newUser);
+
+        expect(response.status).to.equal(422);
+      } catch (error) {
+        console.error('Error:', error);
+    }
+  });
+});
+
 describe('Get All User', () => {
   it('Response Status Equal to 200', async () => {
     const response = await request(baseUrl)
