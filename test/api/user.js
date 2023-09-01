@@ -24,13 +24,32 @@ describe('Post New User', () => {
             console.error('Error:', error);
         }
     });
-})
+});
 
 describe('Post Duplicate User', () => { 
   it('Response Status Equal to 422', async () => {
     const newUser = {
         "name": "Salsabila",
         "email": "salsabila@jast-herman.example",
+        "gender": "female",
+        "status": "inactive"
+    };
+    try {
+        const response = await request(baseUrl)
+          .post(`/users?access-token=${authToken}`)
+          .send(newUser);
+
+        expect(response.status).to.equal(422);
+      } catch (error) {
+        console.error('Error:', error);
+    }
+  });
+});
+
+describe('Post Without Field Name', () => { 
+  it('Response Status Equal to 422', async () => {
+    const newUser = {
+        "email": "salsabila.a@jast-herman.example",
         "gender": "female",
         "status": "inactive"
     };
@@ -61,6 +80,7 @@ describe('Get Selected User Details', () =>{
       expect(response.status).to.equal(200)
       })
 });
+
 
 describe('Put Selected User Details', () =>{
   it('Response Status Equal to 200', async () => {
