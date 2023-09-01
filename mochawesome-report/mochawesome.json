@@ -1,0 +1,295 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-09-01T02:17:39.433Z",
+    "end": "2023-09-01T02:17:42.584Z",
+    "duration": 3151,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8596d2bd-5bed-4d74-a113-31084eaba0f6",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2c2aaad8-71ca-458b-947c-ce73a0e13a29",
+          "title": "Post New User",
+          "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
+          "file": "\\test\\api\\user.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Response Status Equal to 200",
+              "fullTitle": "Post New User Response Status Equal to 200",
+              "timedOut": false,
+              "duration": 1366,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const newUser = {\n    \"name\": \"Salsabila\",\n    \"email\": \"salsabila@jast-herman.example\",\n    \"gender\": \"female\",\n    \"status\": \"inactive\"\n};\ntry {\n    const response = await request(baseUrl)\n      .post(`/users?access-token=${authToken}`)\n      .send(newUser);\n    expect(response.status).to.equal(200);\n  } catch (error) {\n    console.error('Error:', error);\n}",
+              "err": {},
+              "uuid": "8b372714-ff9f-4df7-9297-7580ae9a402d",
+              "parentUUID": "2c2aaad8-71ca-458b-947c-ce73a0e13a29",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8b372714-ff9f-4df7-9297-7580ae9a402d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1366,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "5536056d-2156-4635-8d79-54f41af618ed",
+          "title": "Post Duplicate User",
+          "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
+          "file": "\\test\\api\\user.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Response Status Equal to 422",
+              "fullTitle": "Post Duplicate User Response Status Equal to 422",
+              "timedOut": false,
+              "duration": 305,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const newUser = {\n    \"name\": \"Salsabila\",\n    \"email\": \"salsabila@jast-herman.example\",\n    \"gender\": \"female\",\n    \"status\": \"inactive\"\n};\ntry {\n    const response = await request(baseUrl)\n      .post(`/users?access-token=${authToken}`)\n      .send(newUser);\n    expect(response.status).to.equal(422);\n  } catch (error) {\n    console.error('Error:', error);\n}",
+              "err": {},
+              "uuid": "0c59e18c-d3c6-410f-a9df-fca41a04ab02",
+              "parentUUID": "5536056d-2156-4635-8d79-54f41af618ed",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0c59e18c-d3c6-410f-a9df-fca41a04ab02"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 305,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "4d84b35f-a53d-4946-a094-ed608bdab9d7",
+          "title": "Get All User",
+          "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
+          "file": "\\test\\api\\user.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Response Status Equal to 200",
+              "fullTitle": "Get All User Response Status Equal to 200",
+              "timedOut": false,
+              "duration": 313,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request(baseUrl)\n  .get(`/users?access-token=${authToken}`)\n  expect(response.status).to.equal(200)",
+              "err": {},
+              "uuid": "d5a53767-5b24-40a2-9d07-6e889c51eec1",
+              "parentUUID": "4d84b35f-a53d-4946-a094-ed608bdab9d7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d5a53767-5b24-40a2-9d07-6e889c51eec1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 313,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "320f3655-cf64-4d50-b7f4-f483093ab42f",
+          "title": "Get Selected User Details",
+          "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
+          "file": "\\test\\api\\user.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Response Status Equal to 200",
+              "fullTitle": "Get Selected User Details Response Status Equal to 200",
+              "timedOut": false,
+              "duration": 295,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request(baseUrl)\n  .get(`/users/${userId}?access-token=${authToken}`)\n  expect(response.status).to.equal(200)",
+              "err": {},
+              "uuid": "bd98dae9-4064-4bd7-a52e-b7459c52e984",
+              "parentUUID": "320f3655-cf64-4d50-b7f4-f483093ab42f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bd98dae9-4064-4bd7-a52e-b7459c52e984"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 295,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "22f5b85a-f45c-412e-9874-3508d86c9297",
+          "title": "Put Selected User Details",
+          "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
+          "file": "\\test\\api\\user.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Response Status Equal to 200",
+              "fullTitle": "Put Selected User Details Response Status Equal to 200",
+              "timedOut": false,
+              "duration": 291,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request(baseUrl)\n  .put(`/users/${userId}?access-token=${authToken}`)\n  .send({\n    \"name\": \"Salsabila\",\n    \"email\": \"salsabila@jast-herman.example\",\n    \"gender\": \"female\",\n    \"status\": \"active\"\n});\n  expect(response.status).to.equal(200)",
+              "err": {},
+              "uuid": "224086f5-1b98-48cb-8dcb-8a9f018257a0",
+              "parentUUID": "22f5b85a-f45c-412e-9874-3508d86c9297",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "224086f5-1b98-48cb-8dcb-8a9f018257a0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 291,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "18f9be8d-9696-427b-b8c3-09e9ae69d005",
+          "title": "Delete Selected User",
+          "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
+          "file": "\\test\\api\\user.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Response Status Equal to 200",
+              "fullTitle": "Delete Selected User Response Status Equal to 200",
+              "timedOut": false,
+              "duration": 488,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request(baseUrl)\n.delete(`/users/${userId}?access-token=${authToken}`)\nexpect(response.status).to.equal(200)",
+              "err": {},
+              "uuid": "48cf7dee-95d9-4294-a09b-642b77dab815",
+              "parentUUID": "18f9be8d-9696-427b-b8c3-09e9ae69d005",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "48cf7dee-95d9-4294-a09b-642b77dab815"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 488,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 10000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
