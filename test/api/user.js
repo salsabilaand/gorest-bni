@@ -24,7 +24,7 @@ describe('Post New User', () => {
             console.error('Error:', error);
         }
     });
-});
+})
 
 describe('Post Duplicate User', () => { 
   it('Response Status Equal to 422', async () => {
