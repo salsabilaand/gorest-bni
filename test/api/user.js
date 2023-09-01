@@ -46,6 +46,46 @@ describe('Post Duplicate User', () => {
   });
 });
 
+describe('Post Email Invalid', () => { 
+  it('Response Status Equal to 422', async () => {
+    const newUser = {
+        "name": "Salsabila",
+        "email": "salsabila",
+        "gender": "female",
+        "status": "inactive"
+    };
+    try {
+        const response = await request(baseUrl)
+          .post(`/users?access-token=${authToken}`)
+          .send(newUser);
+
+        expect(response.status).to.equal(422);
+      } catch (error) {
+        console.error('Error:', error);
+    }
+  });
+});
+
+describe('Post Status Invalid', () => { 
+  it('Response Status Equal to 422', async () => {
+    const newUser = {
+        "name": "Salsabila",
+        "email": "salsabila@jast-herman.example",
+        "gender": "female",
+        "status": "ok"
+    };
+    try {
+        const response = await request(baseUrl)
+          .post(`/users?access-token=${authToken}`)
+          .send(newUser);
+
+        expect(response.status).to.equal(422);
+      } catch (error) {
+        console.error('Error:', error);
+    }
+  });
+});
+
 describe('Post Without Field Name', () => { 
   it('Response Status Equal to 422', async () => {
     const newUser = {

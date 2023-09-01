@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 11,
-    "tests": 11,
-    "passes": 7,
+    "suites": 12,
+    "tests": 12,
+    "passes": 12,
     "pending": 0,
-    "failures": 4,
-    "start": "2023-09-01T04:19:01.302Z",
-    "end": "2023-09-01T04:19:47.816Z",
-    "duration": 46514,
-    "testsRegistered": 11,
-    "passPercent": 63.63636363636363,
+    "failures": 0,
+    "start": "2023-09-01T04:42:03.840Z",
+    "end": "2023-09-01T04:42:07.655Z",
+    "duration": 3815,
+    "testsRegistered": 12,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f857ea65-fe39-490f-8189-ad905fa15188",
+      "uuid": "bb12639f-9376-458c-b816-88ed9d45a276",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "1342c255-2eab-480e-8c8c-b4f7fdcdfbe0",
+          "uuid": "93314a6e-e9b0-4a80-8842-32b599a44219",
           "title": "Post New User",
           "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
           "file": "\\test\\api\\user.js",
@@ -38,7 +38,7 @@
               "title": "Response Status Equal to 200",
               "fullTitle": "Post New User Response Status Equal to 200",
               "timedOut": false,
-              "duration": 591,
+              "duration": 466,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,69 +47,26 @@
               "context": null,
               "code": "const newUser = {\n    \"name\": \"Salsabila\",\n    \"email\": \"salsabila@jast-herman.example\",\n    \"gender\": \"female\",\n    \"status\": \"inactive\"\n};\ntry {\n    const response = await request(baseUrl)\n      .post(`/users?access-token=${authToken}`)\n      .send(newUser);\n    expect(response.status).to.equal(200);\n  } catch (error) {\n    console.error('Error:', error);\n}",
               "err": {},
-              "uuid": "a68b469a-b338-47cc-901d-2c317de585b2",
-              "parentUUID": "1342c255-2eab-480e-8c8c-b4f7fdcdfbe0",
+              "uuid": "ca7fa99c-7d8d-4413-b60d-be28b290040c",
+              "parentUUID": "93314a6e-e9b0-4a80-8842-32b599a44219",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a68b469a-b338-47cc-901d-2c317de585b2"
+            "ca7fa99c-7d8d-4413-b60d-be28b290040c"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 591,
+          "duration": 466,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "1574c816-eaba-4561-92bb-6fa8b516707d",
-          "title": "Post New User",
-          "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
-          "file": "\\test\\api\\user.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "Response Status Equal to 200",
-              "fullTitle": "Post New User Response Status Equal to 200",
-              "timedOut": true,
-              "duration": 10012,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
-              "pending": false,
-              "context": null,
-              "code": "const newUser = {\n    \"name\": \"Salsabila\",\n    \"email\": \"salsabila@jast-herman.example\",\n    \"gender\": \"female\",\n    \"status\": \"inactive\"\n};\ntry {\n    const response = await request(baseUrl)\n      .post(`/users?access-token=${authToken}`)\n      .send(newUser);\n    expect(response.statusCode).to.equal(200);\n  } catch (error) {\n    console.error('Error:', error);\n}",
-              "err": {
-                "message": "Error: Timeout of 10000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (E:\\E\\gorest-bni\\test\\api\\user.js)",
-                "estack": "Error: Timeout of 10000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (E:\\E\\gorest-bni\\test\\api\\user.js)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)",
-                "diff": null
-              },
-              "uuid": "550b7bd7-ee6e-49af-addb-5e0aabdebcde",
-              "parentUUID": "1574c816-eaba-4561-92bb-6fa8b516707d",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [],
-          "failures": [
-            "550b7bd7-ee6e-49af-addb-5e0aabdebcde"
-          ],
-          "pending": [],
-          "skipped": [],
-          "duration": 10012,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 10000
-        },
-        {
-          "uuid": "ab88cd49-facc-4c58-b897-3e08d625c548",
+          "uuid": "b1eaeae1-5838-40bb-ab32-aa38370bb46e",
           "title": "Post Duplicate User",
           "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
           "file": "\\test\\api\\user.js",
@@ -119,40 +76,114 @@
             {
               "title": "Response Status Equal to 422",
               "fullTitle": "Post Duplicate User Response Status Equal to 422",
-              "timedOut": true,
-              "duration": 10003,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "timedOut": false,
+              "duration": 318,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "const newUser = {\n    \"name\": \"Salsabila\",\n    \"email\": \"salsabila@jast-herman.example\",\n    \"gender\": \"female\",\n    \"status\": \"inactive\"\n};\ntry {\n    const response = await request(baseUrl)\n      .post(`/users?access-token=${authToken}`)\n      .send(newUser);\n    expect(response.status).to.equal(422);\n  } catch (error) {\n    console.error('Error:', error);\n}",
-              "err": {
-                "message": "Error: Timeout of 10000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (E:\\E\\gorest-bni\\test\\api\\user.js)",
-                "estack": "Error: Timeout of 10000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (E:\\E\\gorest-bni\\test\\api\\user.js)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)",
-                "diff": null
-              },
-              "uuid": "e8a4fdc5-8ae4-4461-978d-4ad1cf71843e",
-              "parentUUID": "ab88cd49-facc-4c58-b897-3e08d625c548",
+              "err": {},
+              "uuid": "bcb50c65-daf7-4c5c-bc34-49d4c8f14938",
+              "parentUUID": "b1eaeae1-5838-40bb-ab32-aa38370bb46e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "e8a4fdc5-8ae4-4461-978d-4ad1cf71843e"
+          "passes": [
+            "bcb50c65-daf7-4c5c-bc34-49d4c8f14938"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 10003,
+          "duration": 318,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "0a710320-332b-43e6-8d09-c2b2749afe61",
+          "uuid": "f808b804-0a04-4dcb-9f67-5c1904f4b2ac",
+          "title": "Post Email Invalid",
+          "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
+          "file": "\\test\\api\\user.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Response Status Equal to 422",
+              "fullTitle": "Post Email Invalid Response Status Equal to 422",
+              "timedOut": false,
+              "duration": 310,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const newUser = {\n    \"name\": \"Salsabila\",\n    \"email\": \"salsabila\",\n    \"gender\": \"female\",\n    \"status\": \"inactive\"\n};\ntry {\n    const response = await request(baseUrl)\n      .post(`/users?access-token=${authToken}`)\n      .send(newUser);\n    expect(response.status).to.equal(422);\n  } catch (error) {\n    console.error('Error:', error);\n}",
+              "err": {},
+              "uuid": "dcdac46c-de89-4fb6-ace7-409cca18b941",
+              "parentUUID": "f808b804-0a04-4dcb-9f67-5c1904f4b2ac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dcdac46c-de89-4fb6-ace7-409cca18b941"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 310,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "f021812d-2a7f-4d70-9b11-2c15ae24cfbf",
+          "title": "Post Status Invalid",
+          "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
+          "file": "\\test\\api\\user.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Response Status Equal to 422",
+              "fullTitle": "Post Status Invalid Response Status Equal to 422",
+              "timedOut": false,
+              "duration": 289,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const newUser = {\n    \"name\": \"Salsabila\",\n    \"email\": \"salsabila@jast-herman.example\",\n    \"gender\": \"female\",\n    \"status\": \"ok\"\n};\ntry {\n    const response = await request(baseUrl)\n      .post(`/users?access-token=${authToken}`)\n      .send(newUser);\n    expect(response.status).to.equal(422);\n  } catch (error) {\n    console.error('Error:', error);\n}",
+              "err": {},
+              "uuid": "752d7515-e45d-47be-b485-0d88931e5a69",
+              "parentUUID": "f021812d-2a7f-4d70-9b11-2c15ae24cfbf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "752d7515-e45d-47be-b485-0d88931e5a69"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 289,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "a526ecde-8a37-4dc5-9649-9bb6d98a34c4",
           "title": "Post Without Field Name",
           "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
           "file": "\\test\\api\\user.js",
@@ -163,7 +194,7 @@
               "title": "Response Status Equal to 422",
               "fullTitle": "Post Without Field Name Response Status Equal to 422",
               "timedOut": false,
-              "duration": 573,
+              "duration": 315,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -172,26 +203,26 @@
               "context": null,
               "code": "const newUser = {\n    \"email\": \"salsabila.a@jast-herman.example\",\n    \"gender\": \"female\",\n    \"status\": \"inactive\"\n};\ntry {\n    const response = await request(baseUrl)\n      .post(`/users?access-token=${authToken}`)\n      .send(newUser);\n    expect(response.status).to.equal(422);\n  } catch (error) {\n    console.error('Error:', error);\n}",
               "err": {},
-              "uuid": "712d8122-2fb9-45f9-a3f1-d924b194368e",
-              "parentUUID": "0a710320-332b-43e6-8d09-c2b2749afe61",
+              "uuid": "d2254c7b-7fdb-429c-a924-da3f0fdca815",
+              "parentUUID": "a526ecde-8a37-4dc5-9649-9bb6d98a34c4",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "712d8122-2fb9-45f9-a3f1-d924b194368e"
+            "d2254c7b-7fdb-429c-a924-da3f0fdca815"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 573,
+          "duration": 315,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "83b5ff07-6a7f-473b-89a2-53a340897f99",
+          "uuid": "ce4a76ea-c95e-48b0-900c-d5557568cbe5",
           "title": "Post Without Field Email",
           "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
           "file": "\\test\\api\\user.js",
@@ -202,7 +233,7 @@
               "title": "Response Status Equal to 422",
               "fullTitle": "Post Without Field Email Response Status Equal to 422",
               "timedOut": false,
-              "duration": 2249,
+              "duration": 301,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -211,26 +242,26 @@
               "context": null,
               "code": "const newUser = {\n    \"name\": \"Salsabila\",\n    \"gender\": \"female\",\n    \"status\": \"inactive\"\n};\ntry {\n    const response = await request(baseUrl)\n      .post(`/users?access-token=${authToken}`)\n      .send(newUser);\n    expect(response.status).to.equal(422);\n  } catch (error) {\n    console.error('Error:', error);\n}",
               "err": {},
-              "uuid": "007db7e4-3cc0-43e3-bf41-5ca9d4a3defd",
-              "parentUUID": "83b5ff07-6a7f-473b-89a2-53a340897f99",
+              "uuid": "6c4d7f2e-5bd2-4097-8b6d-4432ba42e790",
+              "parentUUID": "ce4a76ea-c95e-48b0-900c-d5557568cbe5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "007db7e4-3cc0-43e3-bf41-5ca9d4a3defd"
+            "6c4d7f2e-5bd2-4097-8b6d-4432ba42e790"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2249,
+          "duration": 301,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "ac7301cd-d5a8-4153-a8c4-e90df9010bf7",
+          "uuid": "c57b75b2-347f-4861-9bc7-86a775724c15",
           "title": "Post Without Field Gender",
           "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
           "file": "\\test\\api\\user.js",
@@ -240,40 +271,36 @@
             {
               "title": "Response Status Equal to 422",
               "fullTitle": "Post Without Field Gender Response Status Equal to 422",
-              "timedOut": true,
-              "duration": 10002,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "timedOut": false,
+              "duration": 289,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "const newUser = {\n    \"name\": \"Salsabila\",\n    \"email\": \"salsabila.a@jast-herman.example\",\n    \"status\": \"inactive\"\n};\ntry {\n    const response = await request(baseUrl)\n      .post(`/users?access-token=${authToken}`)\n      .send(newUser);\n    expect(response.status).to.equal(422);\n  } catch (error) {\n    console.error('Error:', error);\n}",
-              "err": {
-                "message": "Error: Timeout of 10000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (E:\\E\\gorest-bni\\test\\api\\user.js)",
-                "estack": "Error: Timeout of 10000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (E:\\E\\gorest-bni\\test\\api\\user.js)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)",
-                "diff": null
-              },
-              "uuid": "8442de4e-7157-47f4-bfea-06a602294134",
-              "parentUUID": "ac7301cd-d5a8-4153-a8c4-e90df9010bf7",
+              "err": {},
+              "uuid": "08830cbf-1fbf-4f8b-9afe-4d37ef4b5838",
+              "parentUUID": "c57b75b2-347f-4861-9bc7-86a775724c15",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "8442de4e-7157-47f4-bfea-06a602294134"
+          "passes": [
+            "08830cbf-1fbf-4f8b-9afe-4d37ef4b5838"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 10002,
+          "duration": 289,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "4cec292d-d972-4552-9648-3ba7dcfa6ac6",
+          "uuid": "8f9c0b94-4271-42d7-b38e-657ed5fc5bac",
           "title": "Post Without Field Status",
           "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
           "file": "\\test\\api\\user.js",
@@ -284,7 +311,7 @@
               "title": "Response Status Equal to 422",
               "fullTitle": "Post Without Field Status Response Status Equal to 422",
               "timedOut": false,
-              "duration": 811,
+              "duration": 283,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -293,26 +320,26 @@
               "context": null,
               "code": "const newUser = {\n    \"name\": \"Salsabila\",\n    \"email\": \"salsabila.a@jast-herman.example\",\n    \"gender\": \"female\",\n};\ntry {\n    const response = await request(baseUrl)\n      .post(`/users?access-token=${authToken}`)\n      .send(newUser);\n    expect(response.status).to.equal(422);\n  } catch (error) {\n    console.error('Error:', error);\n}",
               "err": {},
-              "uuid": "4f07ec78-bbb0-4eef-a045-c999849d45b8",
-              "parentUUID": "4cec292d-d972-4552-9648-3ba7dcfa6ac6",
+              "uuid": "55dff653-fbc7-4dc9-9f46-784fa48de375",
+              "parentUUID": "8f9c0b94-4271-42d7-b38e-657ed5fc5bac",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "4f07ec78-bbb0-4eef-a045-c999849d45b8"
+            "55dff653-fbc7-4dc9-9f46-784fa48de375"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 811,
+          "duration": 283,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "efb3f106-4841-4b94-8d09-b1c96451abe9",
+          "uuid": "6b503938-e6e4-4e9c-90ac-9539b950baa4",
           "title": "Get All User",
           "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
           "file": "\\test\\api\\user.js",
@@ -323,35 +350,35 @@
               "title": "Response Status Equal to 200",
               "fullTitle": "Get All User Response Status Equal to 200",
               "timedOut": false,
-              "duration": 1056,
+              "duration": 296,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const response = await request(baseUrl)\n  .get(`/users?access-token=${authToken}`)\n  expect(response.status).to.equal(200)",
+              "code": "const response = await request(baseUrl)\n  .get(`/users?access-token=${authToken}`)\n  expect(response.status).to.equal(200);",
               "err": {},
-              "uuid": "6f9be576-9c46-4f4e-a9bc-33c6eb22f400",
-              "parentUUID": "efb3f106-4841-4b94-8d09-b1c96451abe9",
+              "uuid": "ef462594-bf09-47a9-84c0-d660ba637b9e",
+              "parentUUID": "6b503938-e6e4-4e9c-90ac-9539b950baa4",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6f9be576-9c46-4f4e-a9bc-33c6eb22f400"
+            "ef462594-bf09-47a9-84c0-d660ba637b9e"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1056,
+          "duration": 296,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "23b9379a-4320-41e2-a74b-271df168412e",
+          "uuid": "957a7060-8afa-44f1-a23d-f97dde54def4",
           "title": "Get Selected User Details",
           "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
           "file": "\\test\\api\\user.js",
@@ -362,35 +389,35 @@
               "title": "Response Status Equal to 200",
               "fullTitle": "Get Selected User Details Response Status Equal to 200",
               "timedOut": false,
-              "duration": 624,
+              "duration": 316,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const response = await request(baseUrl)\n  .get(`/users/${userId}?access-token=${authToken}`)\n  expect(response.status).to.equal(200)",
+              "code": "const response = await request(baseUrl)\n  .get(`/users/${userId}?access-token=${authToken}`);\n  expect(response.status).to.equal(200);",
               "err": {},
-              "uuid": "c498bb8f-d7ce-4aae-a57f-c4a3cccc1efe",
-              "parentUUID": "23b9379a-4320-41e2-a74b-271df168412e",
+              "uuid": "845a7451-f752-4bd2-a931-3693801e0206",
+              "parentUUID": "957a7060-8afa-44f1-a23d-f97dde54def4",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c498bb8f-d7ce-4aae-a57f-c4a3cccc1efe"
+            "845a7451-f752-4bd2-a931-3693801e0206"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 624,
+          "duration": 316,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "1e86b97d-c86f-4391-a360-5f6fe7b9a224",
+          "uuid": "3eb21c10-6e53-49f5-818a-1dd527fc9de2",
           "title": "Put Selected User Details",
           "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
           "file": "\\test\\api\\user.js",
@@ -401,35 +428,35 @@
               "title": "Response Status Equal to 200",
               "fullTitle": "Put Selected User Details Response Status Equal to 200",
               "timedOut": false,
-              "duration": 541,
+              "duration": 282,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const response = await request(baseUrl)\n  .put(`/users/${userId}?access-token=${authToken}`)\n  .send({\n    \"name\": \"Salsabila\",\n    \"email\": \"salsabila@jast-herman.example\",\n    \"gender\": \"female\",\n    \"status\": \"active\"\n})\n  expect(response.status).to.equal(200)",
+              "code": "const response = await request(baseUrl)\n  .put(`/users/${userId}?access-token=${authToken}`)\n  .send({\n    \"name\": \"Salsabila\",\n    \"email\": \"salsabila@jast-herman.example\",\n    \"gender\": \"female\",\n    \"status\": \"active\"\n});\n  expect(response.status).to.equal(200);",
               "err": {},
-              "uuid": "a54c1499-bc7f-4542-b824-817ce1fd7d20",
-              "parentUUID": "1e86b97d-c86f-4391-a360-5f6fe7b9a224",
+              "uuid": "16f4f10e-d4e6-428b-a8ac-23e34af0e359",
+              "parentUUID": "3eb21c10-6e53-49f5-818a-1dd527fc9de2",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a54c1499-bc7f-4542-b824-817ce1fd7d20"
+            "16f4f10e-d4e6-428b-a8ac-23e34af0e359"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 541,
+          "duration": 282,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "23d60131-d3c7-4bbd-884c-2093fc0fba51",
+          "uuid": "2b8be3a3-0e84-4f97-8cf4-8164e04f2567",
           "title": "Delete Selected User",
           "fullFile": "E:\\E\\gorest-bni\\test\\api\\user.js",
           "file": "\\test\\api\\user.js",
@@ -439,34 +466,30 @@
             {
               "title": "Response Status Equal to 200",
               "fullTitle": "Delete Selected User Response Status Equal to 200",
-              "timedOut": true,
-              "duration": 10001,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "timedOut": false,
+              "duration": 276,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
-              "code": "const response = await request(baseUrl)\n.delete(`/users/${userId}?access-token=${authToken}`)\nexpect(response.status).to.equal(200)",
-              "err": {
-                "message": "Error: Timeout of 10000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (E:\\E\\gorest-bni\\test\\api\\user.js)",
-                "estack": "Error: Timeout of 10000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (E:\\E\\gorest-bni\\test\\api\\user.js)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)",
-                "diff": null
-              },
-              "uuid": "cf27c8f7-5be9-4c6a-8315-ec3c65606a18",
-              "parentUUID": "23d60131-d3c7-4bbd-884c-2093fc0fba51",
+              "code": "const response = await request(baseUrl)\n.delete(`/users/${userId}?access-token=${authToken}`)\nexpect(response.status).to.equal(200);",
+              "err": {},
+              "uuid": "bea6c6d0-78bb-4e54-a24e-3b273e22844e",
+              "parentUUID": "2b8be3a3-0e84-4f97-8cf4-8164e04f2567",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "cf27c8f7-5be9-4c6a-8315-ec3c65606a18"
+          "passes": [
+            "bea6c6d0-78bb-4e54-a24e-3b273e22844e"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 10001,
+          "duration": 276,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
